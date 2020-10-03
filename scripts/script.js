@@ -63,7 +63,7 @@ function appendToDom(){
             console.log(monthlyCost);
             $('#monthlyTotal').text(monthlyCost);
             if (monthlyCost > 20000) {
-                $('#red').addClass('red')
+                $('#monthlyTotal').addClass('red')
             }
     }//end of loop
     $('.deleteBtn').on('click', deleteEmp);    
