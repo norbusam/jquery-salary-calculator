@@ -39,6 +39,7 @@ function appendToDom(){
     let display = $('#tbody');
     display.empty();
 
+    let monthlyCost = 0;
 
     // console.log('trying to push to DOM');
     // console.log(employees.firstName);
@@ -52,7 +53,11 @@ function appendToDom(){
                 <td>${employees[i].annualSalary}</td>
                 <td><button class = "deleteBtn">Delete</button>
             </tr>`)
+            monthlyCost += Number(`${employees[i].annualSalary}`/12);
+            console.log(monthlyCost);
+            $('#monthlyTotal').text(monthlyCost)
     }//end of loop
+    
     $('.deleteBtn').on('click', deleteEm);
 }//end of appendToDom
 
