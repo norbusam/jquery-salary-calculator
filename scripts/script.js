@@ -39,6 +39,7 @@ function addEmployee(){
     $('#annualSalary').val('');  
    //calls the appendToDom function
     appendToDom();
+    $('.deleteBtn').on('click', deleteEmp);    
 }// end of addEmployee
 
 function appendToDom(){
@@ -57,16 +58,19 @@ function appendToDom(){
                 <td>${employees[i].id}</td>
                 <td>${employees[i].title}</td>
                 <td>${employees[i].annualSalary}</td>
-                <td><button class = "deleteBtn">Delete</button></td>
+                <td><button class = "deleteBtn btn btn-danger">Delete</button></td>
             </tr>`)
-            monthlyCost += Number(`${employees[i].annualSalary}`/12);
+            monthlyCost += Math.round(`${employees[i].annualSalary}`/12);
             console.log(monthlyCost);
             $('#monthlyTotal').text(monthlyCost);
+            //conditional to add red background color if over 20k
             if (monthlyCost > 20000) {
-                $('#monthlyTotal').addClass('red')
+                $('#monthlyTotal').addClass('p-3 mb-2 bg-danger text-white')
+            }else{
+                $('#monthlyTotal').addClass('p-3 mb-2 bg-success text-white')
             }
     }//end of loop
-    $('.deleteBtn').on('click', deleteEmp);    
+    
 }//end of appendToDom
 
 function deleteEmp(){
