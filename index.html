@@ -12,23 +12,31 @@
     <h1>Salary Calculator</h1>
     <h3>Add Employee</h3>
     <div>
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="number" placeholder="ID">
-        <input type="text" placeholder="Title">
-        <input type="number" placeholder="Annual Salary">
+        <input id="firstName" type="text" placeholder="First Name">
+        <input id="lastName" type="text" placeholder="Last Name">
+        <input id="id" type="number" placeholder="ID">
+        <input id="title" type="text" placeholder="Title">
+        <input id="annualSalary" type="number" placeholder="Annual Salary">
         <button id="submitBtn">Submit</button>
     </div>
     <h3>Employees</h3>
     <div>
-        <table>
-            <thead>First Name</thead>
-            <thead>Last Name</thead>
-            <thead>ID</thead>
-            <thead>Title</thead>
-            <thead>Annual Salary</thead>
-            <thead></thead>
+        <table id="table">
+            <thead>
+                <tr>
+                    <th>First Name</th>
+                    <th>Last Name</th>
+                    <th>ID</th>
+                    <th>Title</th>
+                    <th>Annual Salary</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="tbody">
+                <tr></tr>
+            </tbody>
         </table>
+        <h3>Total Monthly:20000</h3>
     </div>
 </body>
 </html>
