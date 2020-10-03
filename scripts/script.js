@@ -42,9 +42,13 @@ function appendToDom(){
     // console.log('trying to push to DOM');
     // console.log(employees.firstName);
     for (let i = 0; i < employees.length; i++) {
-        $('#table').children().append(
+        display.append(
             `<tr>
                 <td>${employees[i].firstName}</td>
+                <td>${employees[i].lastName}</td>
+                <td>${employees[i].id}</td>
+                <td>${employees[i].title}</td>
+                <td>${employees[i].annualSalary}</td>
             </tr>`)
         
     }//end of loop
