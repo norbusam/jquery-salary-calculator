@@ -39,6 +39,7 @@ function appendToDom(){
     let display = $('#tbody');
     display.empty();
 
+
     // console.log('trying to push to DOM');
     // console.log(employees.firstName);
     for (let i = 0; i < employees.length; i++) {
@@ -49,7 +50,13 @@ function appendToDom(){
                 <td>${employees[i].id}</td>
                 <td>${employees[i].title}</td>
                 <td>${employees[i].annualSalary}</td>
+                <td><button class = "deleteBtn">Delete</button>
             </tr>`)
-        
     }//end of loop
+    $('.deleteBtn').on('click', deleteEm);
 }//end of appendToDom
+
+function deleteEm(){
+    console.log('deleted');
+    $(this).parent().parent().remove();
+}//end of deleteEm
