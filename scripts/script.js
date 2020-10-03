@@ -37,10 +37,8 @@ function addEmployee(){
     $('#id').val('');
     $('#title').val('');
     $('#annualSalary').val('');  
-   
+   //calls the appendToDom function
     appendToDom();
-    // validateInput();
-    
 }// end of addEmployee
 
 function appendToDom(){
@@ -63,10 +61,12 @@ function appendToDom(){
             </tr>`)
             monthlyCost += Number(`${employees[i].annualSalary}`/12);
             console.log(monthlyCost);
-            $('#monthlyTotal').text(monthlyCost)
+            $('#monthlyTotal').text(monthlyCost);
+            if (monthlyCost > 20000) {
+                $('#red').addClass('red')
+            }
     }//end of loop
-    $('.deleteBtn').on('click', deleteEmp);
-    
+    $('.deleteBtn').on('click', deleteEmp);    
 }//end of appendToDom
 
 function deleteEmp(){
