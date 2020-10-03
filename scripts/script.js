@@ -25,7 +25,6 @@ function addEmployee(){
                     title: title,
                     annualSalary: annualSalary    
          })
-     appendToDom();
     //empties the input after submit is clicked
     $('#firstName').val('');
     $('#lastName').val('');
@@ -33,17 +32,20 @@ function addEmployee(){
     $('#title').val('');
     $('#annualSalary').val('');  
    
-
+    appendToDom();
 }// end of addEmployee
 
 function appendToDom(){
     let display = $('#tbody');
     display.empty();
 
-    console.log('trying to push to DOM');
-    console.log(employees.firstName);
+    // console.log('trying to push to DOM');
+    // console.log(employees.firstName);
     for (let i = 0; i < employees.length; i++) {
-        $('#table').children().append(`<tr><td> ${firstName}</td></tr>`)
+        $('#table').children().append(
+            `<tr>
+                <td>${employees[i].firstName}</td>
+            </tr>`)
         
     }//end of loop
 }//end of appendToDom
