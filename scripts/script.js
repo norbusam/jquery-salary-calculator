@@ -37,10 +37,13 @@ function addEmployee(){
 }// end of addEmployee
 
 function appendToDom(){
+    let display = $('#tbody');
+    display.empty();
+
     console.log('trying to push to DOM');
     console.log(employees.firstName);
     for (let i = 0; i < employees.length; i++) {
-        $('#table').children().append(`<tr> ${firstName}</tr>`)
+        $('#table').children().append(`<tr><td> ${firstName}</td></tr>`)
         
     }//end of loop
 }//end of appendToDom
