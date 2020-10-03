@@ -8,6 +8,7 @@ function onReady(){
     console.log('JQ loaded');
     $('#submitBtn').on('click', addEmployee);
 
+    
     // $('#table').on('click', appendToDom);
 }// end of onReady
 
@@ -18,6 +19,11 @@ function addEmployee(){
     let id = $('#id').val();
     let title = $('#title').val();
     let annualSalary = $('#annualSalary').val();
+    //conditional to check all input fields are entered
+    if ((firstName === '') || (lastName === '') || (id === '') ||(title === '') ||(annualSalary === '')){
+        alert('Please fill out all the field!!');
+        return false;
+    }// end of conditional
     //grabs the value from the input fields and push it into the employees array
     employees.push({firstName: firstName,
                     lastName: lastName,
@@ -33,6 +39,8 @@ function addEmployee(){
     $('#annualSalary').val('');  
    
     appendToDom();
+    // validateInput();
+    
 }// end of addEmployee
 
 function appendToDom(){
@@ -51,17 +59,18 @@ function appendToDom(){
                 <td>${employees[i].id}</td>
                 <td>${employees[i].title}</td>
                 <td>${employees[i].annualSalary}</td>
-                <td><button class = "deleteBtn">Delete</button>
+                <td><button class = "deleteBtn">Delete</button></td>
             </tr>`)
             monthlyCost += Number(`${employees[i].annualSalary}`/12);
             console.log(monthlyCost);
             $('#monthlyTotal').text(monthlyCost)
     }//end of loop
+    $('.deleteBtn').on('click', deleteEmp);
     
-    $('.deleteBtn').on('click', deleteEm);
 }//end of appendToDom
 
-function deleteEm(){
+function deleteEmp(){
     console.log('deleted');
     $(this).parent().parent().remove();
 }//end of deleteEm
+
