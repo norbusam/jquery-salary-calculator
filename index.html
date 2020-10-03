@@ -5,11 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="scripts/jquery.js"></script>
     <script src="scripts/script.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <link rel="stylesheet" href="scripts/style.css">
     <title>Salary Calculator</title>
 </head>
 <body>
-    <h1>Salary Calculator</h1>
+    <h1 class="jumbotron">Salary Calculator</h1>
     <h3>Add Employee</h3>
     <div>
         <input id="firstName" type="text" placeholder="First Name" required>
@@ -17,12 +18,12 @@
         <input id="id" type="number" placeholder="ID" required>
         <input id="title" type="text" placeholder="Title" required>
         <input id="annualSalary" type="number" placeholder="Annual Salary" required>
-        <button id="submitBtn">Submit</button>
+        <button id="submitBtn" class="btn btn-primary">Submit</button>
     </div>
     <h3>Employees</h3>
     <div>
-        <table id="table">
-            <thead>
+        <table id="table" class="table">
+            <thead class="thead-dark">
                 <tr>
                     <th>First Name</th>
                     <th>Last Name</th>
