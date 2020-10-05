@@ -4,6 +4,8 @@
 
 ## Description
 
-Your project description goes here. What problem did you solve? How did you solve it?
+A calculator that keeps track of total monthly cost based on the annual salary of each employee.
+
+It updates on each employee added.
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
