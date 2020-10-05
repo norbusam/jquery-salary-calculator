@@ -1,5 +1,3 @@
-console.log('JS loaded');
-
 $('document').ready(onReady);
 
 let employees = [];
@@ -7,9 +5,6 @@ let employees = [];
 function onReady(){
     console.log('JQ loaded');
     $('#submitBtn').on('click', addEmployee);
-
-    
-    // $('#table').on('click', appendToDom);
 }// end of onReady
 
 function addEmployee(){
@@ -39,17 +34,17 @@ function addEmployee(){
     $('#annualSalary').val('');  
    //calls the appendToDom function
     appendToDom();
-    $('.deleteBtn').on('click', deleteEmp);    
+    $('.deleteBtn').on('click', deleteEmp);  //descentdent listener for the delete button  
 }// end of addEmployee
 
 function appendToDom(){
+    //targeting tbody for appending to DOM
     let display = $('#tbody');
     display.empty();
 
     let monthlyCost = 0;
 
-    // console.log('trying to push to DOM');
-    // console.log(employees.firstName);
+    //loops through the employess array and append to DOM base on index
     for (let i = 0; i < employees.length; i++) {
         display.append(
             `<tr>
