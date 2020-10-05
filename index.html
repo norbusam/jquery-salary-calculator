@@ -10,35 +10,47 @@
     <title>Salary Calculator</title>
 </head>
 <body>
-    <h1 class="jumbotron">Salary Calculator</h1>
-    <h3>Add Employee</h3>
+    <header class="jumbotron d-flex justify-content-center">
+        <h1>Salary Calculator</h1>
+    </header>
+    <div class="d-flex justify-content-center">
+        <h3>Add Employee</h3>
+    </div>
+    
     <div>
+        <label htmlFor="first name">First Name:</label>
         <input id="firstName" type="text" placeholder="First Name" required>
+        <label htmlFor="last name">Last Name:</label>
         <input id="lastName" type="text" placeholder="Last Name" required>
+        <label htmlFor="id">ID:</label>
         <input id="id" type="number" placeholder="ID" required>
+        <label htmlFor="title">Title:</label>
         <input id="title" type="text" placeholder="Title" required>
+        <label htmlFor="annual salary">Annual Salary:</label>
         <input id="annualSalary" type="number" placeholder="Annual Salary" required>
         <button id="submitBtn" class="btn btn-primary">Submit</button>
     </div>
-    <h3>Employees</h3>
-    <div>
-        <table id="table" class="table">
+    <h3 class="d-flex justify-content-center">Employees</h3>
+    <div class="container">
+        <table id="table" class="table table-bordered table-dark">
             <thead class="thead-dark">
                 <tr>
-                    <th>First Name</th>
-                    <th>Last Name</th>
-                    <th>ID</th>
-                    <th>Title</th>
-                    <th>Annual Salary</th>
+                    <th class="text-info">First Name</th>
+                    <th class="text-info">Last Name</th>
+                    <th class="text-info">ID</th>
+                    <th class="text-info">Title</th>
+                    <th class="text-info">Annual Salary</th>
                     <th></th>
                 </tr>
             </thead>
             <tbody id="tbody">
-                <tr></tr>
             </tbody>
+            <tfoot>
+
+            </tfoot>
         </table>
     </div>
-    <div id="red">
+    <div class="d-flex justify-content-center" id="red">
         <h3>Total Monthly:<span id="monthlyTotal"></span>$</h3>
     </div>
 </body>
