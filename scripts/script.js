@@ -92,7 +92,8 @@ function deleteEmp(){
             'success'
           )
         }
-      })
+      })//end of sweetalert
+    //   employees.splice(0, employees.length);
     // $(this).parent().parent().remove();
 }//end of deleteEm
 
