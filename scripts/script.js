@@ -16,7 +16,12 @@ function addEmployee(){
     let annualSalary = $('#annualSalary').val();
     //conditional to check all input fields are entered
     if ((firstName === '') || (lastName === '') || (id === '') ||(title === '') ||(annualSalary === '')){
-        alert('Please fill out all the field!!');
+        // alert('Please fill out all the field!!');
+        Swal.fire({
+            icon: 'error',
+            title: 'Oops...',
+            text: 'Please fill out all fields!'
+          })
         return false;
     }// end of conditional
     //grabs the value from the input fields and push it into the employees array
